@@ -1,0 +1,15 @@
+<mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            {{ this.spell.name }}
+        </mat-panel-title>
+        <mat-panel-description>
+            {{ this.spell.level }}, {{ this.spell.school}}
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p><b>Casting Time:</b>{{ this.spell.castingTime }}</p>
+    <p><b>Range:</b>{{ this.spell.range }}</p>
+    <p><b>Components:</b>{{ this.spell.components }}</p>
+    <p><b>Duration: </b>{{ this.spell.duration }}</p>
+    <p>{{ this.spell.description }}</p>
+</mat-expansion-panel>
