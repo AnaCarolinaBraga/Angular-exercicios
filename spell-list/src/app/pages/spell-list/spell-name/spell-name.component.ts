@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { ConnectableObservable } from 'rxjs';
 import Spell from 'src/app/models/Spell';
 
 @Component({
@@ -6,7 +7,7 @@ import Spell from 'src/app/models/Spell';
   templateUrl: './spell-name.component.html',
   styleUrls: ['./spell-name.component.css']
 })
-export class SpellNameComponent {
+export class SpellNameComponent implements OnChanges{
 
 @Input() spell: Spell = {
   name: "Spell name",
@@ -19,5 +20,18 @@ export class SpellNameComponent {
   description: "Spell description",
   prepared: false
 };
+
+changeStatus(prepared: boolean): void {
+  if(prepared){
+    this.spell.prepared = true
+  }
+  else{
+    this.spell.prepared = false
+  }
+}
+
+ngOnChanges(): void {
+  console.log('Spell status prepared changed');
+}
 
 }

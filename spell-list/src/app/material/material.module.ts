@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatToolbarModule} from '@angular/material/toolbar';
-
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -13,7 +14,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
   ],
   exports: [
     MatToolbarModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatButtonToggleModule,
+    MatButtonModule
   ]
 })
 export class MaterialModule { }

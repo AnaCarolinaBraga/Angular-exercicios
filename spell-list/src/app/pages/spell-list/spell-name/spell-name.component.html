@@ -9,6 +9,11 @@
         <mat-panel-description>
             {{ this.spell.prepared | prepared}} 
         </mat-panel-description>
+        <mat-button-toggle-group appearance="legacy" name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle (change)="changeStatus(true)" (click)="$event.stopPropagation()">Prepare magic</mat-button-toggle>
+            <mat-button-toggle (change)="changeStatus(false)" (click)="$event.stopPropagation()">Unprepare magic</mat-button-toggle>
+          </mat-button-toggle-group>
+          
     </mat-expansion-panel-header>
     <p><b>Casting Time:</b>{{ this.spell.castingTime }}</p>
     <p><b>Range:</b>{{ this.spell.range }}</p>
