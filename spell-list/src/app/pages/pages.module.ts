@@ -5,6 +5,7 @@ import { SpellNameComponent } from './spell-list/spell-name/spell-name.component
 import { SpellListComponent } from './spell-list/spell-list.component';
 import { MaterialModule } from '../material/material.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -16,7 +17,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    SharedModule
   ],
   exports: [
     SpellListComponent,

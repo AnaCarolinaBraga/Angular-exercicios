@@ -16,8 +16,8 @@ export class SpellNameComponent {
   range: "self",
   components: "V",
   duration: "Instantaneous",
-  description: "Spell description"
-
+  description: "Spell description",
+  prepared: false
 };
 
 }

@@ -7,4 +7,5 @@ export default interface Spell {
     components: string;
     duration: string;
     description: string
+    prepared: boolean;
 }

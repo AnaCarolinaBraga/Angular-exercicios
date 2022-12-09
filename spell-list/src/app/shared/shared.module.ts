@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { MaterialModule } from '../material/material.module';
 import { HeaderComponent } from './header/header.component';
+import { FocusDirective } from './directives/focus.directive';
+import { PreparedPipes } from './pipes/prepared.pipes';
 
 
 
@@ -10,7 +12,8 @@ import { HeaderComponent } from './header/header.component';
 @NgModule({
   declarations: [
     HeaderComponent,
-
+    FocusDirective,
+    PreparedPipes
   ],
   imports: [
     CommonModule,
@@ -18,7 +21,8 @@ import { HeaderComponent } from './header/header.component';
   ],
   exports: [
     HeaderComponent,
-
+    FocusDirective,
+    PreparedPipes
   ]
 })
 export class SharedModule { }
