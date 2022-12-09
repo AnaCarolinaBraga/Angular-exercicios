@@ -31,7 +31,7 @@ changeStatus(prepared: boolean): void {
 }
 
 ngOnChanges(): void {
-  console.log('Spell status prepared changed');
+  console.log('Spell prepared status changed');
 }
 
 }
