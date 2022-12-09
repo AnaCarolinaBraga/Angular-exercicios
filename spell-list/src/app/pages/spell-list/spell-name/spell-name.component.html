@@ -10,8 +10,8 @@
             {{ this.spell.prepared | prepared}} 
         </mat-panel-description>
         <mat-button-toggle-group appearance="legacy" name="fontStyle" aria-label="Font Style">
-            <mat-button-toggle (change)="changeStatus(true)" (click)="$event.stopPropagation()">Prepare magic</mat-button-toggle>
-            <mat-button-toggle (change)="changeStatus(false)" (click)="$event.stopPropagation()">Unprepare magic</mat-button-toggle>
+            <mat-button-toggle (change)="changeStatus(true)" (click)="$event.stopPropagation()">Prepare spell</mat-button-toggle>
+            <mat-button-toggle (change)="changeStatus(false)" (click)="$event.stopPropagation()">Unprepare spell</mat-button-toggle>
           </mat-button-toggle-group>
           
     </mat-expansion-panel-header>
