@@ -4,13 +4,15 @@ import { CommonModule } from '@angular/common';
 import { SpellNameComponent } from './spell-list/spell-name/spell-name.component';
 import { SpellListComponent } from './spell-list/spell-list.component';
 import { MaterialModule } from '../material/material.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
 @NgModule({
   declarations: [
     SpellListComponent,
-    SpellNameComponent
+    SpellNameComponent,
+    PageNotFoundComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,8 @@ import { MaterialModule } from '../material/material.module';
   ],
   exports: [
     SpellListComponent,
-    SpellNameComponent
+    SpellNameComponent,
+    PageNotFoundComponent
   ]
 })
 export class PagesModule { }
