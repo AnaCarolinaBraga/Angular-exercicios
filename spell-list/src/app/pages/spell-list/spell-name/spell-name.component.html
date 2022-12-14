@@ -4,7 +4,7 @@
             {{ this.spell.name }}
         </mat-panel-title>
         <mat-panel-description>
-            {{ this.spell.level }}, {{ this.spell.school}}
+            {{ this.spell.level | cantrip }}, {{ this.spell.school}}
         </mat-panel-description>
         <mat-panel-description>
             {{ this.spell.prepared | prepared}} 

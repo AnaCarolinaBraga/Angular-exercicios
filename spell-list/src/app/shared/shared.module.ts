@@ -9,6 +9,7 @@ import { SpellFormComponent } from './spell-form/spell-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { DialogueCreateComponent } from './spell-form/dialogue-create/dialogue-create.component';
+import { CantripPipes } from './pipes/cantrip.pipes';
 
 
 
@@ -20,6 +21,7 @@ import { DialogueCreateComponent } from './spell-form/dialogue-create/dialogue-c
     PreparedPipes,
     SpellFormComponent,
     DialogueCreateComponent,
+    CantripPipes
   ],
   imports: [
     CommonModule,
@@ -32,7 +34,8 @@ import { DialogueCreateComponent } from './spell-form/dialogue-create/dialogue-c
     HeaderComponent,
     FocusDirective,
     PreparedPipes,
-    SpellFormComponent
+    SpellFormComponent,
+    CantripPipes
   ]
 })
 export class SharedModule { }
