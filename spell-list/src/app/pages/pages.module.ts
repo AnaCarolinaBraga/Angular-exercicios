@@ -8,6 +8,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { SharedModule } from '../shared/shared.module';
 import { SpellCreateComponent } from './spell-create/spell-create.component';
 import { DialogueUpdateComponent } from './spell-list/spell-name/dialogue-update/dialogue-update.component';
+import { DialogueDeleteComponent } from './spell-list/spell-name/dialogue-delete/dialogue-delete.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { DialogueUpdateComponent } from './spell-list/spell-name/dialogue-update
     PageNotFoundComponent,
     SpellCreateComponent,
     DialogueUpdateComponent,
+    DialogueDeleteComponent,
   ],
   imports: [
     CommonModule,

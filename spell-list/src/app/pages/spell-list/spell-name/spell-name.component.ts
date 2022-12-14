@@ -2,6 +2,7 @@ import { Component, Input, OnChanges, SimpleChanges, TemplateRef, ViewChild } fr
 import { MatDialog } from '@angular/material/dialog';
 import Spell from 'src/app/models/Spell';
 import { SpellService } from 'src/app/services/spell-service.service';
+import { DialogueDeleteComponent } from './dialogue-delete/dialogue-delete.component';
 
 @Component({
   selector: 'app-spell-name',
@@ -37,7 +38,14 @@ deleteItem() {
 openDialog() {
   if (this.dialogTemplate) {
     this.dialog.open(this.dialogTemplate);
-    console.log("oi")
+  }
+}
+
+openDeleteDialog(){
+  if (this.spell) {
+    this.dialog.open(DialogueDeleteComponent, {
+      data: { id: this.spell.id }
+    });
   }
 }
 
