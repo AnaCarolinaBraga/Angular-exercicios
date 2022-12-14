@@ -1,0 +1,68 @@
+<form class="spell-form" *ngIf="spellForm" [formGroup]="spellForm" (ngSubmit)="onSubmitForm()">
+    
+  <mat-form-field class="full-width" appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+  
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>Level</mat-label>
+      <mat-select formControlName="level">
+        <mat-option value="0">Cantrip</mat-option>
+        <mat-option value="1">1 lvl</mat-option>
+        <mat-option value="2" >2 lvl</mat-option>
+        <mat-option value="3" >3 lvl</mat-option>
+        <mat-option value="4">4 lvl</mat-option>
+        <mat-option value="5">5 lvl</mat-option>
+        <mat-option value="6">6 lvl</mat-option>
+        <mat-option value="7">7 lvl</mat-option>
+        <mat-option value="8">8 lvl</mat-option>
+        <mat-option value="9">9 lvl</mat-option>
+      </mat-select>
+    </mat-form-field >
+
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>School</mat-label>
+      <mat-select formControlName="school">
+        <mat-option value="Abjuration">Abjuration</mat-option>
+        <mat-option value="Conjuration">Conjuration</mat-option>
+        <mat-option value="Divination">Divination</mat-option>
+        <mat-option value="Enchantment">Enchantment</mat-option>
+        <mat-option value="Evocation">Evocation</mat-option>
+        <mat-option value="Illusion">Illusion</mat-option>
+        <mat-option value="Necromancy">Necromancy</mat-option>
+        <mat-option value="Psiconic">Psiconic</mat-option>
+        <mat-option value="Transmutation">Transmutation</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>Casting time</mat-label>
+      <input matInput formControlName="castingTime">
+    </mat-form-field>
+  
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>Range</mat-label>
+      <input matInput formControlName="range">
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>Components</mat-label>
+      <input matInput formControlName="components">
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>Duration</mat-label>
+      <input matInput formControlName="duration">
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>Description</mat-label>
+      <input matInput formControlName="description">
+    </mat-form-field>
+    
+
+    <button class="submit-btn" mat-stroked-button color="primary" type="submit" (click)="openDialog()" *ngIf= 'requestType == "post"'> Create New Spell</button>  
+    <button class="submit-btn" mat-stroked-button color="primary" type="submit" *ngIf= 'requestType == "update"' mat-dialog-close> Update Spell</button>  
+  
+  </form>

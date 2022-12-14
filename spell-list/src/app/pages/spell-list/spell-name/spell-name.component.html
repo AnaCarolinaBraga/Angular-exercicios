@@ -20,4 +20,14 @@
     <p><b>Components:</b>{{ this.spell.components }}</p>
     <p><b>Duration: </b>{{ this.spell.duration }}</p>
     <p>{{ this.spell.description }}</p>
+    <button mat-raised-button color="primary" (click)="openDialog()">Atualizar</button>
+    <button mat-raised-button color="warn" (click)="deleteItem()">Remover</button>
+
+    <ng-template #dialogTemplate>
+        <app-dialogue-update>
+          <app-spell-form requestType="update" [newSpell]="spell" ></app-spell-form>
+        </app-dialogue-update>
+      </ng-template>
+
 </mat-expansion-panel>
+
